@@ -1,0 +1,120 @@
+*{
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  list-style: none;
+  
+  -webkit-tap-highlight-color: transparent;
+  
+  text-decoration: none;
+  
+  border: none;
+  outline: none;
+  
+}
+
+html, body{
+  
+  min-height: 100dvh;
+  
+}
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #1F1F1F;       /* dark but soft background */
+  --bg-card: #2C2C2F;          /* slightly lighter card background */
+
+  /* Text colors */
+  --text-primary: #EDEDED;     /* soft white for main text */
+  --text-secondary: #757575;   /* muted gray for secondary text */
+
+  /* Accent / highlight */
+  --highlight-orange: rgb(255, 117, 24);  /* your main accent color */
+}
+
+body{
+  
+  background: var(--bg-primary);
+  
+  color: var(--text-primary);
+  
+}
+
+#logiConteiner{
+  
+  /*try fix it by rewriting body*/
+  min-height: 100dvh;
+  
+  padding: 0rem 2rem;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#loginCard{
+  
+  max-width: 100%;
+  max-width: 800px;
+  
+  background: var(--bg-card);
+  
+  box-shadow: 2px 2px 20px -5px rgba(0,0,0,0.5);
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+  padding-top: clamp(1.2rem,6vw,4rem);
+  padding-bottom: clamp(1.2rem,6vw,4rem);
+  padding-left: clamp(1rem,5vw,3rem);
+  padding-right: clamp(1rem,5vw,3rem);
+  
+  border-radius: 10px;
+  
+}
+
+#logoConteiner h1{
+  
+  margin-bottom: 2.5rem;
+  
+}
+
+#formConteiner{
+  
+  /*buttons align config*/ 
+  
+}
+
+#conteinerFields{
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  
+  background: #5058AD;
+  
+}
+
+#conteinerFields .fieldConteiner{
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  
+}
+
+.fieldConteiner input{
+  
+  /*set padding,font,bg and color*/
+  
+}

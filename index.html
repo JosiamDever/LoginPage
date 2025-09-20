@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!--Style sheets-->
+  <link rel="stylesheet" href="/style/style.css">
+  
+  <!--Script JavaScript-->
+  <script src="/script/main.js" type="module" charset="utf-8">
+    
+  </script>
+  <title></title>
+</head>
+
+<body>
+  
+  <main>
+    
+    <section id="logiConteiner">
+      
+      <div id="loginCard">
+        
+        <div id="logoConteiner">
+          
+          <h1>Logo</h1>
+        
+        </div>  
+          
+        <form action="/script/main.js" method="post" autocomplete="off" id="formConteiner" novalidate>
+            
+            <fieldset id="conteinerFields">
+              
+              <div class="fieldConteiner">
+                
+                <label for="userField">User name</label>
+              
+                <input type="text" name="userName" id="userField" placeholder="enter your name" required>
+                
+              </div>
+              
+              <div class="fieldConteiner">
+                
+                <label for="emailField">User email</label>
+              
+                <input type="email" name="useeEmail" id="emailField" placeholder="enter your email" required>
+                
+              </div>
+              
+              <div class="fieldConteiner">
+                
+                <label for="passwordField">Password</label>
+              
+                <input type="password" name="userPassword" id="passwordField" placeholder="enter your password" required>
+                
+              </div>
+            
+            </fieldset>  
+           
+           <div id="socialLogin">
+             
+             <button id="loginGoogle" aria-label="Log with Google">
+               
+               <img src="/google.img" alt="googleImg">
+               
+               Log with Google 
+               
+             </button>
+             
+             <button id="loginFacebook" aria-label="Log with Facebook">
+               
+               <img src="/facebook.img" alt="facebook logo">
+               
+               Log with Facebook
+               
+             </button>
+             
+             <button id="loginGitHub" aria-label="Log with GitHub">
+               
+               <img src="/GitHub.img" alt="GitHub logo">
+               
+               Log with GitHub
+               
+             </button>
+             
+           </div>
+            
+           <button id="verifyBtn" type="submit" aria-label="Verify">Verify</button>
+           
+           <!--Every button inside a form conteiner is,automatically,turned into type submit,so,overwrite it--> 
+           <button id="tryAgainBtn" type="button" aria-label="Try again">Try again</button>
+            
+        </form>
+        
+      </div>
+      
+    </section>
+    
+  </main>
+  
+</body>
+
+</html>
