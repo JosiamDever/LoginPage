@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Bootstrap icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
   
-  <!--Style sheets-->
+  <!--Local stylesheets-->
   <link rel="stylesheet" href="/style/style.css">
   
   <!--Script JavaScript-->
   <script src="/script/main.js" type="module" charset="utf-8">
     
   </script>
-  <title></title>
+  <title>Login page</title>
 </head>
 
 <body>
@@ -25,7 +28,7 @@
         
         <div id="logoConteiner">
           
-          <h1>Logo</h1>
+          <h1 class="bg-sky-300 py-4 text-orange-600">Logo</h1>
         
         </div>  
           
@@ -57,13 +60,31 @@
                 
               </div>
             
-            </fieldset>  
+            </fieldset>
+            
+           <div id="rememberPlusPassword">
+             
+             <div id="rememberMe">
+               
+               <input type="checkbox" name="remeberMe" id="remeberMeField">
+               
+               Remember me?
+               
+             </div>
+             
+             <div id="forgotPassword">
+               
+               <a href="#">Forgot password?</a>
+               
+             </div>
+             
+           </div>
            
            <div id="socialLogin">
              
              <button id="loginGoogle" aria-label="Log with Google">
                
-               <img src="/google.img" alt="googleImg">
+               <i class="bi bi-google"></i>
                
                Log with Google 
                
@@ -71,7 +92,7 @@
              
              <button id="loginFacebook" aria-label="Log with Facebook">
                
-               <img src="/facebook.img" alt="facebook logo">
+               <i class="bi bi-facebook"></i>
                
                Log with Facebook
                
@@ -79,7 +100,8 @@
              
              <button id="loginGitHub" aria-label="Log with GitHub">
                
-               <img src="/GitHub.img" alt="GitHub logo">
+               <!--overwrite class-->
+               <i class="bi bi-github"></i>
                
                Log with GitHub
                
@@ -99,6 +121,7 @@
     </section>
     
   </main>
+  
   
 </body>
 

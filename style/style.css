@@ -15,6 +15,15 @@
   
 }
 
+html{
+  
+  /*this can changes the rem unit in each element*/ 
+  
+  /*use rem unit to make sure a more predictable layout,at gaps,paddings and widths*/ 
+  font-size: clamp(16px,3vw,2.5rem);
+  
+}
+
 html, body{
   
   min-height: 100dvh;
@@ -25,13 +34,15 @@ html, body{
   /* Backgrounds */
   --bg-primary: #1F1F1F;       /* dark but soft background */
   --bg-card: #2C2C2F;          /* slightly lighter card background */
+  
+  --inputBg: #333333; 
 
   /* Text colors */
   --text-primary: #EDEDED;     /* soft white for main text */
   --text-secondary: #757575;   /* muted gray for secondary text */
 
   /* Accent / highlight */
-  --highlight-orange: rgb(255, 117, 24);  /* your main accent color */
+  --orangeAccent: rgb(255, 117, 24);  /* your main accent color */
 }
 
 body{
@@ -70,10 +81,7 @@ body{
   justify-content: center;
   align-items: center;
   
-  padding-top: clamp(1.2rem,6vw,4rem);
-  padding-bottom: clamp(1.2rem,6vw,4rem);
-  padding-left: clamp(1rem,5vw,3rem);
-  padding-right: clamp(1rem,5vw,3rem);
+  padding: 2rem 1rem;
   
   border-radius: 10px;
   
@@ -87,7 +95,9 @@ body{
 
 #formConteiner{
   
-  /*buttons align config*/ 
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   
 }
 
@@ -97,24 +107,105 @@ body{
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.8rem;
   
-  background: #5058AD;
+  padding: 0rem 1rem;
   
 }
 
 #conteinerFields .fieldConteiner{
   
+  /*try make the input fields increase as well*/ 
+  min-width: 90%;
+  
+  padding: 0rem 1.2rem;
+  
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
   
 }
 
 .fieldConteiner input{
   
   /*set padding,font,bg and color*/
+  min-width: 100%;
+  max-width: 100%;
+  
+  padding: 0.7rem 0.8rem;
+  
+  border-radius: 18px;
+  
+  background: var(--inputBg);
+  
+  box-shadow: 0px 2px 20px -8px rgba(0,0,0,0.4);
+  
+  color: whitesmoke;
+  
+  font-size: 0.9rem;
   
 }
+
+input::placeholder{
+  
+  opacity: 0.6;
+  
+}
+
+.fieldConteiner label{
+  
+  align-self: flex-start;
+  margin-left: 18px;
+  
+  font-size: 0.8rem;
+  
+  opacity: 0.9;
+  
+}
+
+/*general links config*/
+
+/*make more specifc than the CDN stylesheet*/ 
+a{
+  
+  font-size: clamp(0.8rem,0.9rem,1.6rem); 
+  color: var(--text-primary);
+  
+  transition: all 0.3s ease;
+  
+  cursor: pointer;
+  
+  text-decoration: none;
+  
+}
+
+a:hover{
+  
+  color: var(--orangeAccent);
+  
+}
+
+a:active{
+  
+  transform: scale(0.9) translateY(1px);
+  
+}
+
+#rememberPlusPassword{
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  
+}
+
+#rememberMe{
+  
+  font-size: clamp(0.8rem,0.9rem,1.6rem); 
+  
+}
+
