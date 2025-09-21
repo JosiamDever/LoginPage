@@ -20,7 +20,7 @@ html{
   /*this can changes the rem unit in each element*/ 
   
   /*use rem unit to make sure a more predictable layout,at gaps,paddings and widths*/ 
-  font-size: clamp(16px,3vw,2.5rem);
+  font-size: clamp(16px,3vw,60px);
   
 }
 
@@ -38,7 +38,7 @@ html, body{
   --inputBg: #333333; 
 
   /* Text colors */
-  --text-primary: #EDEDED;     /* soft white for main text */
+  --text-primary: rgb(237, 237, 237);   /* soft white for main text */
   --text-secondary: #757575;   /* muted gray for secondary text */
 
   /* Accent / highlight */
@@ -69,8 +69,8 @@ body{
 
 #loginCard{
   
+  min-width: 100%;
   max-width: 100%;
-  max-width: 800px;
   
   background: var(--bg-card);
   
@@ -95,21 +95,29 @@ body{
 
 #formConteiner{
   
+  min-width: 100%;
+  max-width: 100%;
+  
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
+  align-items: center;
+  gap: clamp(2rem,2rem,3rem);
+  
+  padding: clamp(0rem,0.8rem,2rem) clamp(0.8rem,2rem,4rem);
   
 }
 
 #conteinerFields{
   
+  min-width: 100%;
+  max-width: 100%;
+  
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
   gap: 1.8rem;
   
-  padding: 0rem 1rem;
+  padding: 0rem 0rem;
   
 }
 
@@ -118,7 +126,7 @@ body{
   /*try make the input fields increase as well*/ 
   min-width: 90%;
   
-  padding: 0rem 1.2rem;
+  padding: 0rem 0rem;
   
   display: flex;
   flex-flow: column nowrap;
@@ -144,7 +152,7 @@ body{
   
   color: whitesmoke;
   
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem,0.9rem,1.2rem);
   
 }
 
@@ -195,6 +203,9 @@ a:active{
 
 #rememberPlusPassword{
   
+  min-width: 100%;
+  max-width: 100;
+  
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -206,6 +217,94 @@ a:active{
 #rememberMe{
   
   font-size: clamp(0.8rem,0.9rem,1.6rem); 
+  
+}
+
+#socialLogin{
+  
+  max-width: 200px;
+  min-width: 100%;
+  
+  
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 2rem;
+  
+  
+}
+
+#socialLogin button{
+  
+  /*min-width has more priority than max one,so,try use fixes wodth*/ 
+  max-width: 400px;
+  width: 100%;
+  
+  display: flex;
+  flex-flow: row nowrap;
+
+  align-items: center;
+  gap: clamp(0.8rem,0.8rem,1rem);
+  
+  text-align: left;
+  
+  padding: clamp(0.8rem,0.5rem,1rem) clamp(1rem,0.9rem,1.9rem);
+  
+  /*more specific*/ 
+  
+  font-size: clamp(1rem,0.4rem,1.2rem);
+  
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  
+}
+
+#loginGoogle{
+  
+  background: #DB4437;
+  color: var(--text-primary);
+  
+  transition: all 0.3s ease;
+  
+}
+
+#loginGoogle:hover{
+  
+  background: #C62828;
+  
+}
+
+#loginFacebook{
+  
+  background: #1877F2;
+  color: var(--text-primary);
+  
+  transition: all 0.3s ease;
+  
+}
+
+#loginFacebook:hover{
+  
+  background: #0D47A1;
+  
+}
+
+#loginGitHub{
+  
+  background: #24292E;
+  color: var(--text-primary);
+  
+  /*the variable color value must be as rgba/rgb*/ 
+  border: 0.5px solid rgba(57, 255, 20,0.3);
+  
+  transition: all 0.3s ease;
+  
+}
+
+#loginGitHub:hover{
+  
+  background: #000000;
   
 }
 

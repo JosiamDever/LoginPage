@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head lang="en">
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -80,9 +81,10 @@
              
            </div>
            
+           <!--later,try make this a dropdown,at least,in small screen-->
            <div id="socialLogin">
              
-             <button id="loginGoogle" aria-label="Log with Google">
+             <button id="loginGoogle" aria-label="Log with Google" type="button">
                
                <i class="bi bi-google"></i>
                
@@ -90,7 +92,7 @@
                
              </button>
              
-             <button id="loginFacebook" aria-label="Log with Facebook">
+             <button id="loginFacebook" aria-label="Log with Facebook" type="button">
                
                <i class="bi bi-facebook"></i>
                
@@ -98,7 +100,7 @@
                
              </button>
              
-             <button id="loginGitHub" aria-label="Log with GitHub">
+             <button id="loginGitHub" aria-label="Log with GitHub" type="button">
                
                <!--overwrite class-->
                <i class="bi bi-github"></i>
@@ -108,11 +110,15 @@
              </button>
              
            </div>
-            
-           <button id="verifyBtn" type="submit" aria-label="Verify">Verify</button>
            
-           <!--Every button inside a form conteiner is,automatically,turned into type submit,so,overwrite it--> 
-           <button id="tryAgainBtn" type="button" aria-label="Try again">Try again</button>
+           <div id="buttonsConteiner">
+            
+            <button id="verifyBtn" type="submit" aria-label="Verify">Verify</button>
+           
+            <!--Every button inside a form conteiner is,automatically,turned into type submit,so,overwrite it--> 
+            <button id="tryAgainBtn" type="button" aria-label="Try again">Try again</button>
+            
+           </div>
             
         </form>
         
