@@ -83,7 +83,7 @@ body{
   
   padding: 2rem 1rem;
   
-  border-radius: 10px;
+  border-radius: 20px;
   
 }
 
@@ -201,6 +201,7 @@ a:active{
   
 }
 
+/*change it with a media selector,to fill down on only a line*/ 
 #rememberPlusPassword{
   
   min-width: 100%;
@@ -209,7 +210,7 @@ a:active{
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   
 }
@@ -217,6 +218,23 @@ a:active{
 #rememberMe{
   
   font-size: clamp(0.8rem,0.9rem,1.6rem); 
+  
+}
+
+/*social media log ways dropdown*/
+#moreLogWays{
+  
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.8rem,1rem,1.5rem);
+  
+}
+
+.dropDownArrow{
+  
+  transform: translateY(2px);
   
 }
 
@@ -305,6 +323,72 @@ a:active{
 #loginGitHub:hover{
   
   background: #000000;
+  
+  border-color: rgba(57, 255, 20,0.6);
+  
+}
+
+/*styling last buttons about treats the form data*/ 
+
+#buttonsConteiner{
+  
+  width: 100%;
+  
+  /*max-width: 200px;*/ 
+  
+  backgroun: #626BD1;
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem,1.5rem,3rem)
+  
+}
+
+#buttonsConteiner button{
+  
+  padding: clamp(0.4rem,0.5rem,1rem) clamp(1rem,1.1rem,2rem);
+  
+  color: white;
+  font-size: clamp(1rem,1rem,1.4rem);
+  
+  border-radius: clamp(24px,1.2rem,1.5rem);
+  
+  transition: all 0.2s ease-out;
+  
+}
+
+#buttonsConteiner button:active{
+  
+  transform: scale(0.95);
+  
+}
+
+#verifyBtn{
+  
+  background: var(--orangeAccent);
+  
+}
+
+#verifyBtn:hover{
+  
+  background: rgb(220, 100, 20);
+  
+  
+}
+
+#tryAgainBtn{
+  
+  background: transparent;
+  
+  border: 0.8px solid var(--orangeAccent);
+  
+}
+
+#tryAgainBtn:active{
+  
+  background: var(--bg-primary);
   
 }
 
