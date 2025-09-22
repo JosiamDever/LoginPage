@@ -85,11 +85,16 @@ body{
   
   border-radius: 20px;
   
+  /*smooth resize*/ 
+  transition: width 0.3s ease-out ;
+  
 }
 
 #logoConteiner h1{
   
   margin-bottom: 2.5rem;
+  
+  color: var(--orangeAccent);
   
 }
 
@@ -169,7 +174,7 @@ input::placeholder{
   
   font-size: 0.8rem;
   
-  opacity: 0.9;
+  opacity: 0.8;
   
 }
 
@@ -215,6 +220,12 @@ a:active{
   
 }
 
+#remeberMeField:checked{
+  
+  background: var(--orangeAccent);
+  
+}
+
 #rememberMe{
   
   font-size: clamp(0.8rem,0.9rem,1.6rem); 
@@ -230,6 +241,8 @@ a:active{
   align-items: center;
   gap: clamp(0.8rem,1rem,1.5rem);
   
+  transition: all 0.3s ease;
+  
 }
 
 .dropDownArrow{
@@ -238,7 +251,7 @@ a:active{
   
 }
 
-#socialLogin{
+.socialLogin{
   
   max-width: 200px;
   min-width: 100%;
@@ -252,7 +265,7 @@ a:active{
   
 }
 
-#socialLogin button{
+.socialLogin button{
   
   /*min-width has more priority than max one,so,try use fixes wodth*/ 
   max-width: 400px;
@@ -334,9 +347,7 @@ a:active{
   
   width: 100%;
   
-  /*max-width: 200px;*/ 
-  
-  backgroun: #626BD1;
+  /*max-width: 200px;*/
   
   display: flex;
   flex-flow: row wrap;
@@ -389,6 +400,112 @@ a:active{
 #tryAgainBtn:active{
   
   background: var(--bg-primary);
+  
+}
+
+@keyframes fontGrown{
+  
+  /*that still working even I was filling down only "to"?*/ 
+  from{
+    
+    color: inherit;
+    transform: scale(1);
+    
+  }
+  
+  to{
+    
+    color: var(--orangeAccent);
+    transform: scale(1.05); 
+    
+  }
+  
+}
+
+.fontGrown{
+  
+  /*Set reverse By JS if necessary*/ 
+  animation: fontGrown 0.8s ease forwards;
+  
+}
+
+.fontGrownReverse{
+  
+  animation: fontGrown 0.8s ease forwards;
+  animation-direction: reverse;
+  
+}
+
+@keyframes spinArrow{
+  
+  from{
+    
+    transform: rotate(0deg);
+    
+  }
+  
+  to{
+    
+    /*negative values spin it above*/ 
+    transform: rotate(-180deg);
+    
+  }
+  
+}
+
+.spinArrow{
+  
+  animation: spinArrow 0.8s ease forwards;
+  
+}
+
+.spinArrowReverse{
+  
+  animation: spinArrow 0.8s ease reverse;
+  
+}
+
+@keyframes fadeInDown{
+  
+  from{
+    
+    opacity: 0;
+    transform: translateY(-10px);
+    
+  }
+  
+  to{
+    
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
+  
+}
+
+.fadeInDown{
+  
+  animation: fadeInDown 1s ease-out forwards;
+  
+}
+
+.fadeInDownReverse{
+  
+  animation: fadeInDown 1s ease-out forwards;
+  animation-direction: reverse;
+  
+}
+
+.hide{
+  
+  /*toggle with display*/
+  display: none;
+  
+}
+
+.noTouch{
+  
+  pointer-events: none;
   
 }
 
