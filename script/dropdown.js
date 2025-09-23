@@ -46,7 +46,7 @@ triggerDropD.addEventListener('click', () => {
       
       socialMediaCont.classList.remove('fadeInDown');
       
-      //this ensures the animation runs only a time 
+      //this ensures the animation runs only a time and,in sequence,be removed,meaning that the listeners's stacking will be avoided also the fluid animation reuse be ensured 
     }, {once: true}); 
     
     //changes flag data 
