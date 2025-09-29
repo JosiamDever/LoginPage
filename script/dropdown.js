@@ -6,9 +6,13 @@ const spotterArrow = triggerDropD.querySelector('.dropDownArrow')
 const socialMediaCont = document.querySelector('.socialLogin')
 
 //switch statment block feature 
-let cardTrigged = false 
+let cardTrigged = false
+
+//trigger log card function 
 
 triggerDropD.addEventListener('click', () => {
+  
+  triggerDropD.classList.toggle('disablesLine'); 
   
   if(!cardTrigged){
     
@@ -92,4 +96,17 @@ triggerDropD.addEventListener('click', () => {
   }
   
 });
+
+//vanishes the dropdown's underline if the class hasn't the disablesLine class
+function removeUnderLine(){
+  
+  if(triggerDropD.classList.contains('disasbleLine')){
+    
+    triggerDropD.classList.remove('disasbleLine');
+    
+    
+    
+  }
+  
+}; 
 

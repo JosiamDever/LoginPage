@@ -5,3 +5,10 @@ loginForm.addEventListener('submit', (e) => {
   e.preventDefault(); 
   
 });
+
+document.addEventListener('click',() => {
+  
+  const underLine = document.querySelector('#moreLogWays');
+  
+  
+}); 
