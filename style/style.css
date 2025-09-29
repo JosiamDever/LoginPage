@@ -70,7 +70,7 @@ html, body{
   --bg-primary: #1F1F1F;       /* dark but soft background */
   --bg-card: #2C2C2F;          /* slightly lighter card background */
   
-  --inputBg: #333333; 
+  --inputBg: #464646; 
 
   /* Text colors */
   --text-primary: rgb(237, 237, 237);   /* soft white for main text */
@@ -189,7 +189,7 @@ body{
   
   padding: 0.7rem 0.8rem;
   
-  border-radius: 18px;
+  border-radius: clamp(18px,1.1rem,35px);
   
   background: var(--inputBg);
   
@@ -203,7 +203,8 @@ body{
 
 input::placeholder{
   
-  opacity: 0.6;
+  opacity: 0.5;
+  color: lightgray;
   
 }
 
@@ -298,7 +299,13 @@ input[type="checkbox"]:checked {
 
 #rememberMe{
   
-  font-size: clamp(0.8rem,0.9rem,1.6rem); 
+  font-size: clamp(0.8rem,0.9rem,1.6rem);
+  
+}
+
+.forgotPasswordText{
+  
+  font-weight: 600;
   
 }
 
@@ -666,6 +673,12 @@ input[type="checkbox"]:checked {
     flex-flow: row nowrap;
     justify-content: space-around;
     gap: clamp(2rem,2.1rem,3rem); 
+  }
+  
+  .forgotPasswordText{
+    
+    font-weight: 500;
+    
   }
   
 }
