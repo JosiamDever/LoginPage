@@ -8,16 +8,14 @@ const socialMediaCont = document.querySelector('.socialLogin')
 //switch statment block feature 
 let cardTrigged = false
 
-//trigger log card function 
-
-triggerDropD.addEventListener('click', () => {
+//trigger log card function
+function displayCard(){
   
-  triggerDropD.classList.toggle('disablesLine'); 
+  triggerDropD.classList.toggle('disablesLine');
   
   if(!cardTrigged){
     
     //remove any opposite animation,always remove the opposite one when you embed another one 
-    
     triggerDropD.classList.remove('fontGrownReverse');
     spotterArrow.classList.remove('spinArrowReverse'); 
     
@@ -95,18 +93,49 @@ triggerDropD.addEventListener('click', () => {
     
   }
   
+}; 
+
+triggerDropD.addEventListener('click', (ee) => {
+  
+  ee.stopImmediatePropagation(); 
+  
+  displayCard();
+  
 });
 
-//vanishes the dropdown's underline if the class hasn't the disablesLine class
+//vanishes the dropdown's underline if the class has the disablesLine class,by a click out the card 
 function removeUnderLine(){
   
-  if(triggerDropD.classList.contains('disasbleLine')){
+  if(cardTrigged){
     
-    triggerDropD.classList.remove('disasbleLine');
+    displayCard();
     
-    
-    
-  }
+  }; 
   
-}; 
+};
+
+document.addEventListener('click', (ee) => {
+  
+  //check if the click didn't occurs on the further log ways elements 
+  
+  //make it also checks if some element inside the conteiner was clicked 
+  if(socialMediaCont.contains(ee.target)){
+    
+    return; 
+    
+  }else{
+    
+    if(socialMediaCont.classList.contains('fadeInDown')){
+      
+      console.log('sudden interruption avoided'); 
+      
+      return; 
+      
+    }
+    
+    removeUnderLine(); 
+    
+  };
+  
+}); 
 
