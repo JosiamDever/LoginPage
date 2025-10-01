@@ -127,8 +127,6 @@ document.addEventListener('click', (ee) => {
     
     if(socialMediaCont.classList.contains('fadeInDown')){
       
-      console.log('sudden interruption avoided'); 
-      
       return; 
       
     }

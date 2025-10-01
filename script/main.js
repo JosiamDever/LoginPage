@@ -6,9 +6,19 @@ loginForm.addEventListener('submit', (e) => {
   
 });
 
-document.addEventListener('click',() => {
+const resetBtn = document.querySelector('#tryAgainBtn');
+
+resetBtn.addEventListener('click', () => {
   
-  const underLine = document.querySelector('#moreLogWays');
+  loginForm.reset(); 
   
+});
+
+//why DOM local listenrs,like onclick,don't keep working well if you set the script js file as module? 
+
+//reset form data content by button click on
+function resetForm(){
   
-}); 
+  loginForm.reset(); 
+  
+};
